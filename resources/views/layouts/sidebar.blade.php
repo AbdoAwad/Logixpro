@@ -15,7 +15,7 @@
 </div>
 
 <div id="left-sidebar" class="sidebar ">
-	<h5 class="brand-name">Tohama</h5>
+	<h5 class="brand-name">Logixpro</h5>
 	<nav id="left-sidebar-nav" class="sidebar-nav">
 		<ul class="metismenu">
 			<li class="g_heading">Main Menu</li>
@@ -24,6 +24,9 @@
 			</li>
 			<li class="{{ request()->is('demands*') ? 'active' : '' }}">
 				<a href="{{route('demand')}}"><i class="icon-notebook"></i><span>Request</span></a>
+			</li>
+			<li class="{{ request()->is('history*') ? 'active' : '' }}">
+				<a href="{{route('history')}}"><i class="icon-notebook"></i><span>History</span></a>
 			</li>
 		</ul>
 	</nav>        

@@ -7,7 +7,7 @@
 
 <link rel="icon" href="{{ asset('front/images/fav.png') }}" type=image/png/>
 <link rel="shortcut icon" href="{{ asset('main/images/favicon.ico') }}" />
-<title>Tohama</title>
+<title>Logixpro</title>
 
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">

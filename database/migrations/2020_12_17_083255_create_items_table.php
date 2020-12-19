@@ -17,7 +17,7 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('quantity');
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             $table->unsignedBigInteger('demand_id');
             $table->foreign('demand_id')
             

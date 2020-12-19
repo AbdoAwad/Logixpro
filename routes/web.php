@@ -28,9 +28,16 @@ Route::middleware('auth')->group(function() {
         Route::post('/', 'DemandController@create');
         
         Route::prefix('/{id}')->group(function() {
-            Route::delete('/', 'DemandController@delete')->name('demand.items');
-            Route::get('/', 'DemandController@view');
+            Route::post('/', 'DemandController@createItem')->name('demand.items');
+            Route::get('/', 'DemandController@show');
             Route::patch('/', 'DemandController@update');
+        });
+    });
+
+    Route::prefix('/history')->group(function() {
+        Route::get('/', 'HistoryController@index')->name('history');
+        Route::prefix('/{id}')->group(function() {
+            Route::get('/', 'HistoryController@show')->name('history.items');
         });
     });
 
